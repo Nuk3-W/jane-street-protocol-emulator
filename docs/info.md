@@ -1,20 +1,25 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+The project is being developed as a programmable, general-purpose protocol
+emulator for UART, SPI, and I2C. The final design will execute a compact
+instruction stream that reads pins, drives pins, counts cycles, and provides
+deterministic timing for protocol bit-banging.
+
+The current RTL is a bring-up placeholder: it adds the eight dedicated input
+bits (`ui_in`) to the eight bidirectional input bits (`uio_in`) and presents
+the eight-bit result on `uo_out`. The bidirectional pins are inputs in this
+version, and an overflow carry is discarded.
 
 ## How to test
 
-Explain how to use your project
+For the current placeholder design, hold reset low, then release it. Drive an
+eight-bit value on `ui_in` and another on `uio_in`; `uo_out` equals their
+eight-bit sum. For example, `ui_in = 20` and `uio_in = 30` produces
+`uo_out = 50`.
+
+Run the cocotb test suite with `make -C test` to verify this behavior. The
+testbench and this section will be updated with the protocol emulator RTL.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+No external hardware is required for the current placeholder design.
