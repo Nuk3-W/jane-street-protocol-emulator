@@ -1,5 +1,5 @@
 .DS_Store
-.agents
+.agents/
 .idea
 *.vcd
 *.fst
