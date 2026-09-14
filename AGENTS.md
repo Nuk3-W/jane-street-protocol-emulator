@@ -4,8 +4,8 @@ Use one feature branch for each discrete piece of work. Keep the branch focused
 on its feature, and commit changes with a clear message.
 
 Before integrating a completed feature, rebase its branch onto the latest
-`main`. Resolve any conflicts in the feature branch, then run the relevant
-checks again.
+`main` if there is a merge conflict. Resolve any conflicts in the feature branch,
+then run the relevant checks again.
 
 After the feature is reviewed and its checks pass, merge it into `main` with a
 squash merge. The resulting `main` commit should describe the completed feature

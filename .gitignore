@@ -1,5 +1,6 @@
 .DS_Store
 .agents/
+.venv/
 .idea
 *.vcd
 *.fst
@@ -12,3 +13,5 @@ test/sim_build
 test/__pycache__/
 test/results.xml
 test/gate_level_netlist.v
+.devcontainer/devcontainer-lock.json
+tt/
