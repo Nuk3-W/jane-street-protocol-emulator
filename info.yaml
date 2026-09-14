@@ -3,14 +3,15 @@ project:
   title:        "Protocol Emulator"      # Project title
   author:       "Colin Jaworowski"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  description:  "Programmable general-purpose protocol emulator targeting UART, SPI, and I2C."
   language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     0       # TODO: Set the operating frequency when the emulator RTL is defined.
 
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "6x6"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  # Jane Street protocol emulator ASIC competition allocation (IHP CMOS5L).
+  tiles: "6x4"
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  # TODO: Rename alongside the RTL module and testbench when replacing the example.
   top_module:  "tt_um_example"
 
   # List your project's source files here.
@@ -21,6 +22,8 @@ project:
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+# TODO: Define the emulator pin mapping. Blank entries below are pending assignment;
+# the current project.v still contains the template adder, not the emulator.
 pinout:
   # Inputs
   ui[0]: ""
